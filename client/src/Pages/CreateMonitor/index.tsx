@@ -498,6 +498,28 @@ const CreateMonitorPage = () => {
 								/>
 							)}
 						/>
+
+						<Controller
+							name="escalationDelayMinutes"
+							control={control}
+							render={({ field, fieldState }) => (
+								<TextField
+									{...field}
+									value={field.value === undefined ? "" : field.value}
+									onChange={(e) => {
+										const val = e.target.value;
+										field.onChange(val === "" ? undefined : Number(val));
+									}}
+									type="number"
+									inputProps={{ min: 1 }}
+									fieldLabel={t("pages.createMonitor.form.general.option.escalationDelay.label")}
+									placeholder={t("pages.createMonitor.form.general.option.escalationDelay.placeholder")}
+									fullWidth
+									error={!!fieldState.error}
+									helperText={fieldState.error?.message ?? ""}
+								/>
+							)}
+						/>
 					</Stack>
 				}
 			/>

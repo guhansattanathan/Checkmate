@@ -480,6 +480,10 @@
 							"label": "Display name",
 							"placeholder": "e.g. My Website"
 						},
+						"escalationDelay": {
+							"label": "Escalation Delay (minutes)",
+							"placeholder": "Enter delay in minutes"
+						},
 						"secret": {
 							"label": "Authorization secret",
 							"placeholder": "Enter your secret key"
