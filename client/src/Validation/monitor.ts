@@ -31,6 +31,7 @@ const baseSchema = z.object({
 		.number()
 		.min(1, "Escalation delay must be at least 1 minute")
 		.optional(),
+	escalationNotifications: z.array(z.string()).optional(),
 });
 
 // HTTP monitor schema
